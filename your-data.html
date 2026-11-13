@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-type="software" data-radius="round" data-buttons="solid" data-motion>
+<head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("xp-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your data: Xpense</title>
+<meta name="description" content="Sign in with Apple or an email code. Receipts stay on your iPhone. Export to CSV and delete your account any time.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your data: Xpense">
+<meta property="og:description" content="Sign in with Apple or an email code. Receipts stay on your iPhone. Export to CSV and delete your account any time.">
+<meta property="og:image" content="https://xpense.dotxline.com/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/xpense-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/xpense-icon-512.png">
+<meta name="theme-color" content="#F4F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B09" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://xpense.dotxline.com/your-data.html">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400..700&family=Figtree:wght@400..600&family=Martian+Mono:wght@400..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f4f6f3; --p-surface: #ffffff; --p-ink: #0e1512; --p-muted: #56605b;
+  --p-accent: #0a7d61; --p-accent-ink: #ffffff; --p-action: #0a7d61; --p-action-ink: #ffffff;
+  --p-inv-bg: #0e1512; --p-inv-surface: #1b221e; --p-inv-ink: #f4f6f3; --p-inv-muted: #a3ada8;
+  --p-inv-accent: #0a8466; --p-inv-accent-ink: #ffffff; --p-inv-action: #0a8466; --p-inv-action-ink: #ffffff;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.045em;
+  --ly-scale: 0.9;
+}
+</style>
+<link rel="stylesheet" href="assets/xp.css">
+<script>document.documentElement.classList.add('m-enter','xp-js');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+</head>
+<body data-page="your-data">
+<header class="dock" data-root="">
+  <div class="dock__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="dock__home" href="https://dotxline.com/" aria-label="Back to dotXline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg><span>dotXline</span></a>
+    <a class="dock__logo" href="index.html"><img src="img/xpense-icon-512.png" alt="">Xpense</a>
+    <nav class="dock__links" id="dock-links" aria-label="Main"><a href="index.html">Overview</a><a href="features.html">Features</a><a href="shared.html">Shared groups</a><a href="your-data.html" aria-current=page>Your data</a><a href="support.html">Support</a></nav>
+    <button class="icon-btn theme-btn" type="button" aria-label="Switch light and dark"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg></button>
+    <button class="icon-btn dock__menu" type="button" aria-expanded="false" aria-controls="dock-links" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
+    <a class="btn btn--primary" href="#get" data-appstore><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg><span class="lbl-long">Download&nbsp;</span>Xpense</a>
+  </div>
+</header>
+<main id="top">
+  <section class="section page-first" id="privacy" aria-labelledby="privacy-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <h1 id="privacy-h">Your expenses stay with you</h1>
+        <p class="t-lead measure">Xpense only uses your data to run Xpense: to sign you in, show your expenses and sync them between your devices.</p>
+        <ul class="facts-list">
+          <li><b>Sign in your way</b><span>Sign in with Apple, or a one-time code sent to your email.</span></li>
+          <li><b>Receipts stay on your iPhone</b><span>Receipt photos are never uploaded.</span></li>
+          <li><b>No ads, no selling data</b><span>No tracking across other apps and websites. Shared groups are visible only to their members.</span></li>
+          <li><b>Delete or export any time</b><span>Settings, Account, Delete Account removes your account and data from our servers. Export to CSV from Settings.</span></li>
+        </ul>
+        <p><a class="link" href="privacy.html">Read the privacy policy</a></p>
+      </div>
+      <div class="span-7 start-6" style="display:grid;place-items:center"><div class="ph" data-ui aria-hidden="true"><div class="ph__screen"><div class="ph__island"></div><div class="ph__status" aria-hidden="true"><span>9:41</span><i><b></b></i></div><div class="ph__body"><p class="xp-h">Account</p>
+  <p class="set-cap">Signed in</p><div class="set-group"><div><span>Sign in with Apple</span><span style="color:var(--s-2)">Private relay</span></div><div><span>Sync</span><span style="color:var(--s-acc-t)">Up to date</span></div></div>
+  <p class="set-cap">Your data</p><div class="set-group"><div><span>Export expenses</span><span style="color:var(--s-2)">CSV ›</span></div><div><span>Receipt photos</span><span style="color:var(--s-2)">On this iPhone</span></div></div>
+  <div class="set-group" style="margin-top:14px"><div><span class="red">Delete Account</span><span></span></div></div>
+  <p class="set-foot">Deleting your account removes it and your data from our servers.</p></div>
+  <div class="xp-tabs"><span>Home</span><span>History</span><span>Analyze</span><span class="on">Settings</span></div></div></div></div>
+    </div>
+  </section>
+
+
+  <section class="section ground-surface" id="export" aria-labelledby="export-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <h2 id="export-h">Export to CSV, delete any time</h2>
+        <p class="t-lead measure">Settings, Export downloads your expenses as a CSV file. Settings, Account, Delete Account removes your account and your data from our servers.</p>
+        <p><a class="link" href="privacy.html">Read the privacy policy</a></p>
+      </div>
+      <div class="span-7 start-6 xp-csv" data-ui role="img" aria-label="An exported CSV file of expenses">
+        <div class="xp-panel"><b>xpense-export.csv</b><pre data-xp-type>date,category,note,amount
+2026-10-30,Food,Lunch,12.40
+2026-10-30,Transport,Train to work,8.20
+2026-10-29,Groceries,Weekly shop,64.15
+2026-10-28,Bills,Phone bill,71.00</pre></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <h2 id="faq-h">Xpense details and questions</h2>
+        <ul class="rows rows--spec"><li><span class="rows__name">Device</span><span class="rows__value">iPhone</span></li><li><span class="rows__name">Design</span><span class="rows__value">Native, iOS 26</span></li><li><span class="rows__name">Currency</span><span class="rows__value">Pounds (£)</span></li><li><span class="rows__name">Category</span><span class="rows__value">Finance</span></li><li><span class="rows__name">Age rating</span><span class="rows__value">4+</span></li><li><span class="rows__name">Price</span><span class="rows__value">Free on the App Store</span></li></ul>
+        
+      </div>
+      <div class="span-7 start-6 faq"><div class="faq__item"><h3>Deleting your account</h3><p>Open Xpense, then Settings, Account, Delete Account. This permanently removes your account and data from our servers.</p></div><div class="faq__item"><h3>Exporting your expenses</h3><p>Settings, Export downloads your expenses as a CSV file.</p></div><div class="faq__item"><h3>Receipt photos and uploads</h3><p>No. Receipt photos stay on your iPhone.</p></div><div class="faq__item"><h3>Sync between devices</h3><p>Check you are signed in to the same account and online, then pull to refresh. If it still doesn’t sync, <a class="link" href="support.html">contact support</a>.</p></div><div class="faq__item"><h3>Hide My Email and our replies</h3><p>Yes. Apple’s private relay forwards our emails to you. To reach us, write from any address.</p></div><div class="faq__item"><h3>Reporting a shared group</h3><p>Use the report option in the app, or email us with the group name and what happened. We review reports promptly.</p></div></div>
+    </div>
+  </section>
+  <section class="section" id="tour" aria-labelledby="tour-h">
+    <div class="wrap">
+      <div class="section-head"><h2 id="tour-h">More of Xpense, page by page</h2><p class="t-lead measure">Budgets and charts, groups that settle up, and what happens to your data.</p></div>
+      <div class="tour">
+        <a class="tour__card" href="features.html" data-xp-rise>
+          <div class="tour__ui" data-ui aria-hidden="true"><div class="budget-row"><div><span>Groceries</span><span>£210 of £300</span></div><i><b data-xp-fill style="--w:70%"></b></i></div><div class="budget-row"><div><span>Food</span><span>£96 of £120</span></div><i><b data-xp-fill style="--w:80%"></b></i></div><div class="budget-row over"><div><span>Fun</span><span>£64 of £60</span></div><i><b data-xp-fill style="--w:100%"></b></i></div></div>
+          <h3>Features</h3><p>Budgets per category, History, Analyze, recurring bills and goals.</p><span class="tour__go" aria-hidden="true">→</span>
+        </a>
+        <a class="tour__card" href="shared.html" data-xp-rise>
+          <div class="tour__ui" data-ui aria-hidden="true"><div class="who"><span>You paid</span><b>£120.00</b></div><div class="who"><span>Sam owes you</span><b>£40.00</b></div><div class="who"><span>Alex owes you</span><b>£40.00</b></div></div>
+          <h3>Shared groups</h3><p>Flats and trips: who paid, who owes, and settle up in a tap.</p><span class="tour__go" aria-hidden="true">→</span>
+        </a>
+        <a class="tour__card" href="your-data.html" data-xp-rise>
+          <div class="tour__ui tour__ui--csv" data-ui aria-hidden="true"><b>xpense-export.csv</b><span>date,category,amount</span><span>2026-10-30,Food,12.40</span><span>2026-10-30,Transport,8.20</span></div>
+          <h3>Your data</h3><p>Receipts stay on your iPhone. Export to CSV, delete any time.</p><span class="tour__go" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer closing footer--dark ground-inverse" id="get" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Xpense for iPhone</h2><p class="t-lead">Free on the App Store. Sign in with Apple or an email code.</p></div>
+        <a class="btn btn--primary" href="#get" data-appstore><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"/></svg>Download Xpense</a>
+      </div>
+      <p class="close__word" aria-hidden="true">Xpense</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo dock__logo" href="index.html" style="color:inherit"><img src="img/xpense-icon-512.png" alt="">Xpense</a>
+          <p class="footer__lede">An expense tracker for iPhone, made by dotXline LTD in Cardiff.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3>Xpense</h3><ul><li><a href="index.html">Overview</a></li><li><a href="features.html">Features</a></li><li><a href="shared.html">Shared groups</a></li><li><a href="your-data.html">Your data</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Help</h3><ul><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>dotXline</h3><ul><li><a href="https://dotxline.com/">Back to dotXline</a></li><li><a href="https://tockbee.dotxline.com/">Tockbee</a></li><li><a href="https://freshbit.dotxline.com/">FreshBit</a></li></ul></div>
+      </div>
+      <div class="footer__legal"><span>&copy; 2026 dotXline LTD &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script src="assets/xp.js" defer></script>
+</body>
+</html>

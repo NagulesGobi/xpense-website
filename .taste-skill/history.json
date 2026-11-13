@@ -1,0 +1,21 @@
+{
+ "palettes": [],
+ "types": [],
+ "dealt": [
+  "red-hat",
+  "gabarito",
+  "manrope"
+ ],
+ "moments": [
+  {
+   "id": "marquee-row",
+   "at": "2026-11-13T09:20:47.589Z",
+   "seed": "9fd0fccd"
+  },
+  {
+   "id": "liquid-type",
+   "at": "2026-11-13T09:20:47.589Z",
+   "seed": "9fd0fccd"
+  }
+ ]
+}

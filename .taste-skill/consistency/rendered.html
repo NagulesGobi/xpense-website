@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-type="software" data-radius="round" data-buttons="solid" data-motion="" class="m-enter m-enter-done" data-tone="dark" data-ready="1"><head>
+<meta charset="utf-8">
+<script>try{var t=localStorage.getItem("xp-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Xpense: an expense tracker for iPhone</title>
+<meta name="description" content="Log an expense in one tap, keep each category on budget and split costs with friends. Free on the App Store, from dotXline.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Xpense: an expense tracker for iPhone">
+<meta property="og:description" content="One tap to log an expense, budgets per category, and shared groups that settle up. Free on the App Store.">
+<meta property="og:image" content="https://xpense.dotxline.com/share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/xpense-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/xpense-icon-512.png">
+<meta name="theme-color" content="#F4F6F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070B09" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://xpense.dotxline.com/">
+<meta name="site-kind" content="software">
+<meta name="page-type" content="software">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400..700&amp;family=Figtree:wght@400..600&amp;family=Martian+Mono:wght@400..500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #f4f6f3; --p-surface: #ffffff; --p-ink: #0e1512; --p-muted: #56605b;
+  --p-accent: #0a7d61; --p-accent-ink: #ffffff; --p-action: #0a7d61; --p-action-ink: #ffffff;
+  --p-inv-bg: #0e1512; --p-inv-surface: #1b221e; --p-inv-ink: #f4f6f3; --p-inv-muted: #a3ada8;
+  --p-inv-accent: #0a8466; --p-inv-accent-ink: #ffffff; --p-inv-action: #0a8466; --p-inv-action-ink: #ffffff;
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-text: "Figtree", system-ui, sans-serif;
+  --font-mono: "Martian Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.045em;
+  --ly-scale: 0.9;
+}
+</style>
+<link rel="stylesheet" href="assets/xp.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+</head>
+<body>
+<!-- type: software
+     deal: hero triptych, nav: the dotXline glass dock (owner's family pattern, in place of nav-cards), close close-word,
+     footer footer-dark, rhythm surface-pairs, buttons solid, mark: the client's own logo
+     palette: the client's own (Xpense Paper, Ink, Mint; dark: Night) through start.mjs brand, type sora
+     moments: the logo film (#story, carried over from dotxline.com) -->
+<header class="dock ready" data-root="">
+  <div class="dock__bar" style="--pw: 1180px;">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="dock__logo" href="#top"><img src="img/xpense-icon-512.png" alt="">Xpense</a>
+    <nav class="dock__links" id="dock-links" aria-label="Main">
+      <a href="#app">Overview</a><a href="#story">The mark</a><a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#faq">Questions</a>
+    </nav>
+    <button class="icon-btn theme-btn" type="button" aria-label="Switch light and dark"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"></path></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"></path></svg></button>
+    <button class="icon-btn dock__menu" type="button" aria-expanded="false" aria-controls="dock-links" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"></path></svg></button>
+    <a class="btn btn--primary" href="#get" data-appstore=""><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"></path></svg><span class="lbl-long">Download&nbsp;</span>Xpense</a>
+  <button class="dock-dot" type="button" tabindex="-1" aria-label="Open the menu" aria-expanded="true"><img src="img/xpense-icon-512.png" alt=""></button></div>
+</header>
+<main id="top">
+  <section class="hero hero--triptych is-still is-entered" data-enter="" aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="span-3">
+        <p class="t-label hero__fact">Free · iPhone · iOS 26</p>
+        <h1 id="hero-h">Expense tracker for iPhone</h1>
+        <p class="hero__lead">Log an expense in one tap, keep each category on budget and split costs with friends. Free on the App Store, in pounds.</p>
+      </div>
+      <div class="ly-collage span-6 start-4" data-ui="" role="img" aria-label="Xpense screens: this month's spending against budget, a logged expense, the History list, the Analyze chart, a shared group and the Home Screen widget" data-ui-pause-host="" data-ui-still="">
+        <div class="ly-collage__set is-on" aria-hidden="false">
+          <div class="ly-piece pc" style="left:4%;top:6%;width:52%"><small>Spent in October</small><div class="big">£1,248.60</div><span class="ok">£351.40 left of £1,600 budget</span><div class="bars"><i class="last" style="width:92%"></i><i style="width:78%"></i></div></div>
+          <div class="ly-piece pc pc-list" style="left:44%;top:40%;width:52%"><span class="day">Today</span><div><i style="--c:#F59E0B"></i><b>Lunch</b><em>£12.40</em></div><div><i style="--c:#3B82F6"></i><b>Train to work</b><em>£8.20</em></div><div><i style="--c:#22C55E"></i><b>Groceries</b><em>£64.15</em></div></div>
+          <div class="ly-piece pc-toast" style="left:8%;top:62%;width:40%">£3.40 logged to Food.</div>
+        </div>
+        <div class="ly-collage__set" aria-hidden="true" inert="">
+          <div class="ly-piece pc pc-donut" style="left:4%;top:8%;width:60%"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#22C55E" stroke-width="7" stroke-dasharray="37 63" stroke-dashoffset="0"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#F59E0B" stroke-width="7" stroke-dasharray="21 79" stroke-dashoffset="-38"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#3B82F6" stroke-width="7" stroke-dasharray="15 85" stroke-dashoffset="-60"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#EAB308" stroke-width="7" stroke-dasharray="13 87" stroke-dashoffset="-76"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#EC4899" stroke-width="7" stroke-dasharray="9 91" stroke-dashoffset="-90"></circle></svg><ul><li><i style="--c:#22C55E"></i>Groceries</li><li><i style="--c:#F59E0B"></i>Food</li><li><i style="--c:#3B82F6"></i>Transport</li><li><i style="--c:#EAB308"></i>Bills</li><li><i style="--c:#EC4899"></i>Shopping</li></ul></div>
+          <div class="ly-piece pc" style="left:40%;top:52%;width:56%"><small>October against September</small><div class="big">−£12</div><span class="ok">Nice, £12 less than September.</span></div>
+        </div>
+        <div class="ly-collage__set" aria-hidden="true" inert="">
+          <div class="ly-piece pc pc-group" style="left:4%;top:8%;width:52%"><small>Shared group · Trip</small><div class="who"><span>You paid</span><b>£120.00</b></div><div class="who"><span>Sam owes you</span><b>£40.00</b></div><div class="who"><span>Alex owes you</span><b>£40.00</b></div><div class="btnlike">Settle up</div></div>
+          <div class="ly-piece pc pc-widget" style="left:62%;top:10%;width:34%"><small>This month</small><div class="big">£1,248</div><div class="bars"><i class="last" style="width:100%"></i><i style="width:84%"></i></div></div>
+          <div class="ly-piece pc pc-csv" style="left:36%;top:62%;width:60%"><b>xpense-export.csv</b>date,category,amount<br>2026-10-30,Food,12.40<br>2026-10-30,Transport,8.20</div>
+        </div>
+      <button type="button" class="ui-pause loop-pause" aria-label="Pause animation" title="Pause animation"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="4.25" y="3.25" width="2.75" height="9.5" rx="0.9"></rect><rect x="9" y="3.25" width="2.75" height="9.5" rx="0.9"></rect></svg></button></div>
+      <div class="span-3 start-10 hero__cta"><a class="btn btn--primary" href="#get" data-appstore=""><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"></path></svg>Download Xpense</a></div>
+    </div></div>
+  </section>
+
+  <section class="section" id="app" aria-labelledby="app-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <h2 id="app-h">Quick Add logs an expense in one tap</h2>
+        <p class="t-lead measure">Tap a tile and the expense is logged with its category already chosen. Or open New expense, key in the amount and save. Both screens here work.</p>
+        <ul class="facts-list">
+          <li><b>Your tiles, in your order</b><span>Coffee, train, groceries: logged before you forget.</span></li>
+          <li><b>The number first</b><span>This month, what is left of your budget and your last five expenses, on one screen.</span></li>
+        </ul>
+      </div>
+      <div class="span-7 start-6 app-pair"><div class="ph" data-ui="" data-overview="" role="group" aria-label="Working demo of the Xpense Overview. Tap a Quick Add tile to log an expense." data-ui-still=""><div class="ph__screen"><div class="ph__island"></div><div class="ph__status" aria-hidden="true"><span>9:41</span><i><b></b></i></div>
+  <div class="ph__body"><p class="xp-h">Overview</p><p class="xp-sub">Good evening</p>
+  <div class="xp-card"><span class="xp-l">Spent in October</span><b class="xp-total" data-total="">£1,248.60</b><span class="xp-left" data-left="">£351.40 left of £1,600 budget</span><div class="xp-bar"><i data-bar="" style="--w: 78%;"></i></div><div class="xp-row"><span data-used="">78% used</span><span>9 days to go</span></div><span class="xp-add" style="display:grid;place-items:center">+ Add Expense</span></div>
+  <p class="xp-qh">Quick Add</p><div class="xp-grid"><button type="button" class="xp-tile" data-cat="Food" data-amt="12.40" style="--c:#F59E0B"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v8M5 3v4a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 0-3 2-3 5s1 4 3 4v9"></path></svg></i>Food</button><button type="button" class="xp-tile" data-cat="Transport" data-amt="8.20" style="--c:#3B82F6"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16V9l2-4h12l2 4v7M4 16h16M4 16v2M20 16v2M7 13h.01M17 13h.01"></path></svg></i>Transport</button><button type="button" class="xp-tile" data-cat="Fuel" data-amt="45.00" style="--c:#EF4444"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16M4 21h12M15 9h2l2 2v6a1.5 1.5 0 0 0 3 0V8l-3-3M8 7h4"></path></svg></i>Fuel</button><button type="button" class="xp-tile" data-cat="Subs" data-amt="10.99" style="--c:#A855F7"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3M18 3v4h-4M6 21v-4h4"></path></svg></i>Subs</button><button type="button" class="xp-tile" data-cat="Shopping" data-amt="24.00" style="--c:#EC4899"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 13H6L5 8zM9 8V6a3 3 0 0 1 6 0v2"></path></svg></i>Shopping</button><button type="button" class="xp-tile" data-cat="Groceries" data-amt="64.15" style="--c:#22C55E"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.5 11h10L20 7H6.2M9 20h.01M17 20h.01"></path></svg></i>Groceries</button><button type="button" class="xp-tile" data-cat="Bills" data-amt="71.00" style="--c:#EAB308"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"></path></svg></i>Bills</button><button type="button" class="xp-tile" data-cat="Fun" data-amt="18.50" style="--c:#38BDF8"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7L12 3z"></path></svg></i>Fun</button></div>
+  <p class="xp-qh">Recent</p><ul class="xp-recent" data-recent=""><li><i style="--c:#F59E0B"></i><span><b>Lunch</b><small>Food · Today</small></span><em>£12.40</em></li><li><i style="--c:#3B82F6"></i><span><b>Train to work</b><small>Transport · Today</small></span><em>£8.20</em></li></ul></div>
+  <div class="xp-toast" data-toast="" role="status" aria-live="polite"></div>
+  <div class="xp-tabs" aria-hidden="true"><span class="on">Home</span><span>History</span><span>Analyze</span><span>Shared</span></div></div></div><div class="ph" data-ui="" data-keypad="" role="group" aria-label="Working demo of New expense. Pick a category, key in an amount and save." data-ui-still=""><div class="ph__screen"><div class="ph__island"></div><div class="ph__status" aria-hidden="true"><span>9:41</span><i><b></b></i></div>
+  <div class="ph__body"><div class="kp-form"><p class="kp-title">New expense</p><p class="kp-amt" aria-live="polite">£0.00</p>
+  <div class="kp-chips" role="group" aria-label="Category"><button type="button" class="kp-chip" data-cat="Food" aria-pressed="false">Food</button><button type="button" class="kp-chip" data-cat="Transport" aria-pressed="false">Transport</button><button type="button" class="kp-chip" data-cat="Groceries" aria-pressed="false">Groceries</button><button type="button" class="kp-chip" data-cat="Fun" aria-pressed="false">Fun</button></div>
+  <div class="kp-keys"><button type="button" class="kp-key" data-k="1" aria-label="1">1</button><button type="button" class="kp-key" data-k="2" aria-label="2">2</button><button type="button" class="kp-key" data-k="3" aria-label="3">3</button><button type="button" class="kp-key" data-k="4" aria-label="4">4</button><button type="button" class="kp-key" data-k="5" aria-label="5">5</button><button type="button" class="kp-key" data-k="6" aria-label="6">6</button><button type="button" class="kp-key" data-k="7" aria-label="7">7</button><button type="button" class="kp-key" data-k="8" aria-label="8">8</button><button type="button" class="kp-key" data-k="9" aria-label="9">9</button><button type="button" class="kp-key" data-k="00" aria-label="double zero">00</button><button type="button" class="kp-key" data-k="0" aria-label="0">0</button><button type="button" class="kp-key" data-k="del" aria-label="delete">⌫</button></div><button type="button" class="kp-save" disabled="">Save expense</button></div>
+  <div class="kp-done" hidden=""><span class="kp-tick"><svg viewBox="0 0 44 44" aria-hidden="true"><path d="M11 23 19 31 33 14"></path></svg></span><p class="kp-log" aria-live="polite"></p><p class="kp-msg"></p>
+  <div class="kp-bars" aria-hidden="true"><small>Last month</small><div class="last"><b></b></div><small>This month so far</small><div class="this"><b></b></div></div><button type="button" class="kp-again">Add another</button></div></div>
+  <div class="xp-tabs" aria-hidden="true"><span class="on">Home</span><span>History</span><span>Analyze</span><span>Shared</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="film live" id="story" data-scroll-moment="" style="--h: 2; --p: 0.0000;" aria-label="What the Xpense mark means">
+    <div class="wrap film-pin">
+      <div class="film-inner grid">
+        <svg class="span-5" viewBox="100 230 830 560" aria-hidden="true">
+          <path class="ghost-path" d="M252.11 384.82 H771.89"></path><path class="ghost-path" d="M252.11 639.18 H771.89"></path>
+          <path class="draw last" data-step="0" pathLength="1" d="M252.11 384.82 H771.89" style="stroke-dashoffset: 1; opacity: 0;"></path>
+          <path class="draw kept" data-step="2" data-to=".85" pathLength="1" d="M429.06 639.18 H771.89" style="stroke-dashoffset: 1; opacity: 0;"></path>
+          <path class="draw this" data-step="1" data-to=".85" pathLength="1" d="M252.11 639.18 H550.71" style="stroke-dashoffset: 1; opacity: 0;"></path>
+        </svg>
+        <div class="film-caps span-7 start-6">
+          <div class="film-cap on"><p class="t-label">Last month</p><h2>The mark’s top bar is last month</h2><p>Every expense in it is there to search, filter by period and category, and read day by day.</p></div>
+          <div class="film-cap"><p class="t-label">This month</p><h2>The mark’s mint bar is this month</h2><p>Quick Add tiles open a new expense with the category already chosen. Your tiles, in your order.</p></div>
+          <div class="film-cap"><p class="t-label">What you kept</p><h2>The mark’s amber gap is what you kept</h2><p>Spend less than last month and Xpense says so: “Nice, £12 less than September.” Spend more and it stays neutral.</p></div>
+        </div>
+      </div>
+      <div class="film-progress" aria-hidden="true"><i></i></div>
+    </div>
+  </section>
+
+  <section class="section g2" id="features" aria-labelledby="features-h">
+    <div class="wrap"><div class="group">
+      <div class="section-head"><h2 id="features-h">Everything Xpense does, on one iPhone</h2><p class="t-lead measure">Built natively for iPhone with the design of iOS 26. Works offline and syncs when you are back.</p></div>
+      <div class="fx-grid">
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div class="chips-row"><span class="on">This month</span><span>Food</span><span>Transport</span></div><div class="pc pc-list" style="background:var(--p-surface)"><span class="day">Thursday 30 October</span><div><i style="--c:#F59E0B"></i><b>Lunch</b><em>£12.40</em></div><div><i style="--c:#3B82F6"></i><b>Train to work</b><em>£8.20</em></div></div></div><div><h3>Finds any expense in History</h3><p>Search, filter by period or category, grouped by day. Swipe to edit or delete.</p></div></article>
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div class="pc pc-donut" style="background:var(--p-surface)"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="15.9" fill="none" stroke="#22C55E" stroke-width="7" stroke-dasharray="37 63" stroke-dashoffset="0"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#F59E0B" stroke-width="7" stroke-dasharray="21 79" stroke-dashoffset="-38"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#3B82F6" stroke-width="7" stroke-dasharray="15 85" stroke-dashoffset="-60"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#EAB308" stroke-width="7" stroke-dasharray="13 87" stroke-dashoffset="-76"></circle><circle cx="21" cy="21" r="15.9" fill="none" stroke="#EC4899" stroke-width="7" stroke-dasharray="9 91" stroke-dashoffset="-90"></circle></svg><ul><li><i style="--c:#22C55E"></i>Groceries</li><li><i style="--c:#F59E0B"></i>Food</li><li><i style="--c:#3B82F6"></i>Transport</li><li><i style="--c:#EAB308"></i>Bills</li><li><i style="--c:#EC4899"></i>Shopping</li></ul></div></div><div><h3>Shows where the month went</h3><p>Month totals, a category donut, bar charts and this month against last.</p></div></article>
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div class="pc" style="background:var(--p-surface)"><div class="budget-row"><div><span>Groceries</span><span>£210 of £300</span></div><i><b style="--w:70%"></b></i></div><div class="budget-row"><div><span>Food</span><span>£96 of £120</span></div><i><b style="--w:80%"></b></i></div><div class="budget-row over"><div><span>Fun</span><span>£64 of £60</span></div><i><b style="--w:100%"></b></i></div></div></div><div><h3>Keeps each category on budget</h3><p>A budget for the month and one for each category, with what is left in plain view.</p></div></article>
+      </div></div><div class="group"><div class="fx-grid">
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div class="pc" style="background:var(--p-surface)"><small>Savings goal · Holiday</small><div class="big">£85 a month</div><span class="ok">to reach £1,020 by next September</span><div class="pc-list" style="margin-top:8px"><div><i style="--c:#EAB308"></i><b>Phone bill</b><em>Monthly</em></div></div></div></div><div><h3>Plans recurring bills and goals</h3><p>Recurring bills, and the monthly amount you need to hit a savings deadline.</p></div></article>
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div class="pc pc-group" style="background:var(--p-surface)"><small>Shared group · Flat</small><div class="who"><span>You paid</span><b>£90.00</b></div><div class="who"><span>Jo owes you</span><b>£45.00</b></div><div class="btnlike">Settle up</div></div></div><div><h3>Splits costs and settles up</h3><p>Groups for flats and trips. Xpense tracks who paid and who owes, and settles up in a tap.</p></div></article>
+        <article class="fx"><div class="fx__ui" data-ui="" data-ui-still=""><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center"><div class="pc pc-widget"><small>This month</small><div class="big" style="font-size:24px">£1,248</div><div class="bars"><i class="last" style="width:100%"></i><i style="width:84%"></i></div></div><div class="pc" style="background:var(--p-surface);font-size:14px"><small>Siri</small><b>“Add an expense”</b><small style="margin-top:6px">Lunch · £12.40 · Food</small></div></div></div><div><h3>Adds from widgets and Siri</h3><p>Home Screen widgets and an “Add an expense” shortcut. Reminders are local and off until you switch them on.</p></div></article>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="section ground-surface" id="privacy" aria-labelledby="privacy-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <h2 id="privacy-h">Your expenses stay with you</h2>
+        <p class="t-lead measure">Xpense only uses your data to run Xpense: to sign you in, show your expenses and sync them between your devices.</p>
+        <ul class="facts-list">
+          <li><b>Sign in your way</b><span>Sign in with Apple, or a one-time code sent to your email.</span></li>
+          <li><b>Receipts stay on your iPhone</b><span>Receipt photos are never uploaded.</span></li>
+          <li><b>No ads, no selling data</b><span>No tracking across other apps and websites. Shared groups are visible only to their members.</span></li>
+          <li><b>Delete or export any time</b><span>Settings, Account, Delete Account removes your account and data from our servers. Export to CSV from Settings.</span></li>
+        </ul>
+        <p><a class="link" href="privacy.html">Read the privacy policy</a></p>
+      </div>
+      <div class="span-7 start-6" style="display:grid;place-items:center"><div class="ph" data-ui="" aria-hidden="true" data-ui-still=""><div class="ph__screen"><div class="ph__island"></div><div class="ph__status" aria-hidden="true"><span>9:41</span><i><b></b></i></div><div class="ph__body"><p class="xp-h">Account</p>
+  <p class="set-cap">Signed in</p><div class="set-group"><div><span>Sign in with Apple</span><span style="color:var(--s-2)">Private relay</span></div><div><span>Sync</span><span style="color:var(--s-acc-t)">Up to date</span></div></div>
+  <p class="set-cap">Your data</p><div class="set-group"><div><span>Export expenses</span><span style="color:var(--s-2)">CSV ›</span></div><div><span>Receipt photos</span><span style="color:var(--s-2)">On this iPhone</span></div></div>
+  <div class="set-group" style="margin-top:14px"><div><span class="red">Delete Account</span><span></span></div></div>
+  <p class="set-foot">Deleting your account removes it and your data from our servers.</p></div>
+  <div class="xp-tabs"><span>Home</span><span>History</span><span>Analyze</span><span class="on">Settings</span></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap grid">
+      <div class="span-5 stack-4">
+        <img class="faq-icon" src="img/xpense-icon-512.png" alt="Xpense app icon" width="96" height="96">
+        <h2 id="faq-h">Xpense details and questions</h2>
+        <ul class="rows rows--spec"><li><span class="rows__name">Device</span><span class="rows__value">iPhone</span></li><li><span class="rows__name">Design</span><span class="rows__value">Native, iOS 26</span></li><li><span class="rows__name">Currency</span><span class="rows__value">Pounds (£)</span></li><li><span class="rows__name">Category</span><span class="rows__value">Finance</span></li><li><span class="rows__name">Age rating</span><span class="rows__value">4+</span></li><li><span class="rows__name">Price</span><span class="rows__value">Free on the App Store</span></li></ul>
+      </div>
+      <div class="span-7 start-6 faq"><div class="faq__item"><h3>Deleting your account</h3><p>Open Xpense, then Settings, Account, Delete Account. This permanently removes your account and data from our servers.</p></div><div class="faq__item"><h3>Exporting your expenses</h3><p>Settings, Export downloads your expenses as a CSV file.</p></div><div class="faq__item"><h3>Receipt photos and uploads</h3><p>No. Receipt photos stay on your iPhone.</p></div><div class="faq__item"><h3>Sync between devices</h3><p>Check you are signed in to the same account and online, then pull to refresh. If it still doesn’t sync, <a class="link" href="support.html">contact support</a>.</p></div><div class="faq__item"><h3>Hide My Email and our replies</h3><p>Yes. Apple’s private relay forwards our emails to you. To reach us, write from any address.</p></div><div class="faq__item"><h3>Reporting a shared group</h3><p>Use the report option in the app, or email us with the group name and what happened. We review reports promptly.</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="get" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Xpense for iPhone</h2><p class="t-lead">Free on the App Store. Sign in with Apple or an email code.</p></div>
+        <a class="btn btn--primary" href="#get" data-appstore=""><svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.5 2-3.6-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.7zM14.1 5.6c.6-.8 1.1-1.9 1-3-.9 0-2.1.6-2.7 1.4-.6.7-1.1 1.8-1 2.9 1 .1 2.1-.5 2.7-1.3z"></path></svg>Download Xpense</a>
+      </div>
+      <p class="close__word" aria-hidden="true">Xpense</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo dock__logo" href="#top" style="color:inherit"><img src="img/xpense-icon-512.png" alt="">Xpense</a>
+          <p class="footer__lede">An expense tracker for iPhone, made by dotXline LTD in Cardiff.</p>
+        </div>
+        <div class="span-2 start-7 footer__col"><h3>Xpense</h3><ul><li><a href="#app">Overview</a></li><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Help</h3><ul><li><a href="support.html">Support</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>dotXline</h3><ul><li><a href="https://dotxline.com/">dotxline.com</a></li><li><a href="https://tockbee.dotxline.com/">Tockbee</a></li><li><a href="https://freshbit.dotxline.com/">FreshBit</a></li></ul></div>
+      </div>
+      <div class="footer__legal"><span>© 2026 dotXline LTD &nbsp; <a href="privacy.html">Privacy</a> &nbsp; <a href="terms.html">Terms</a></span></div>
+    </div>
+  </div>
+</footer>
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script src="assets/xp.js" defer=""></script>
+
+
+</body></html>

@@ -1,0 +1,933 @@
+{
+ "start": "2026-11-13T09:20:16.918Z",
+ "round": 3,
+ "idle": 0,
+ "errors": 0,
+ "status": "open",
+ "history": [
+  {
+   "at": "2026-11-13T09:31:07.926Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 66,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-13T09:33:37.062Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 33,
+   "round": 2,
+   "reused": false,
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-13T09:47:11.423Z",
+   "mode": "manual",
+   "status": "open",
+   "fails": 13,
+   "round": 3,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "software",
+  "category": "expense tracker app for iPhone",
+  "primary": "Download Xpense",
+  "rounds": 3,
+  "start": "2026-11-13T09:20:16.918Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "2c5388c73477d8d0:7a6618a0",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "2c5388c73477d8d0",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "nav",
+    "where": "header.dock.ready > div.dock__bar",
+    "msg": "the nav bar spans 130-1310px but the content spans 80-1360px",
+    "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav"
+    ],
+    "wheres": [
+     "header.dock.ready > div.dock__bar"
+    ]
+   },
+   {
+    "check": "button-styles",
+    "where": "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Download Xpense\"",
+    "msg": "one button style (pill, fill #0a8466) in 2 heights: 52, 64px (\"Download Xpense\" 64px, \"Download Xpense\" 52px)",
+    "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "button-styles"
+    ],
+    "wheres": [
+     "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Download Xpense\""
+    ]
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\"",
+    "msg": "\"The mark’s top bar is last month\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Deleting your account\", \"Sync between devices\", \"Hide My Email and our re\", \"Reporting a shared group\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "copy-headings"
+    ],
+    "wheres": [
+     "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\"",
+    "msg": "an h3 at 42px, as large as the smallest h2 (42px) or larger",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#top > section.hero.hero--triptych / section#app",
+    "msg": "407px between these sections, +122% against the median 183px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "main#top > section.hero.hero--triptych / section#app"
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#features / section#privacy",
+    "msg": "495px between these sections, +111% against the median 235px of gaps at a change of ground",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#features / section#privacy"
+    ]
+   },
+   {
+    "check": "empty-area",
+    "where": "section#story \"The mark’s top bar is last month\"",
+    "msg": "82% of the section is empty: 1424px under its last (svg.span-5), 4% beside content that covers under half the container, in its 1800px of rows (WARN over 35%, FAIL over 50%)",
+    "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "empty-area"
+    ],
+    "wheres": [
+     "section#story \"The mark’s top bar is last month\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "header.dock.ready \"Skip to content Xpense OverviewThe markF\"",
+    "msg": "the nav's content runs 148px from the left and 138px from the right (read from its outermost blocks: no .wrap): the page's container starts at 80px; 148 and 138px are not one margin; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+    "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "header.dock.ready \"Skip to content Xpense OverviewThe markF\""
+    ]
+   },
+   {
+    "check": "row-lines",
+    "where": "section#app > div.wrap.grid > div.span-7.start-6 \"9:41 OverviewGood evening Spent in Octob\"",
+    "msg": "a row of 2 items: its first item starts at 728px, the container's left line at 80px (2px either way) (SR-7)",
+    "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "row-lines"
+    ],
+    "wheres": [
+     "section#app > div.wrap.grid > div.span-7.start-6 \"9:41 OverviewGood evening Spent in Octob\""
+    ]
+   },
+   {
+    "check": "nav-covers",
+    "where": "header.dock.ready \"Skip to content Xpense\"",
+    "msg": "sits on top of the text \"Groups for flats and trips. Xpense track\" while the page scrolls: part of the line shows beside it",
+    "fix": "make the fixed nav one opaque band across the whole screen, or let it scroll away with the page",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "nav-covers"
+    ],
+    "wheres": [
+     "header.dock.ready \"Skip to content Xpense\""
+    ]
+   },
+   {
+    "check": "off-grid",
+    "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\"",
+    "msg": "left edge at 208px, 7px off a common edge of its section at 201px (4 elements, like a)",
+    "fix": "move it onto the page margin, or the column edge its section uses",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "off-grid"
+    ],
+    "wheres": [
+     "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#app / section#story",
+    "msg": "48px between these sections, -61% against the median 123px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "section#app / section#story"
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "#story section.film.live \"Last monthThe mark’s top bar is \"",
+    "msg": "its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "#story section.film.live \"Last monthThe mark’s top bar is \""
+    ]
+   },
+   {
+    "check": "hero-lines",
+    "where": "section.hero h1",
+    "msg": "the check fills the h1 to 34 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+    "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-lines"
+    ],
+    "wheres": [
+     "section.hero h1"
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "#features section.section.g2 \"Everything Xpense does, on one i\"",
+    "msg": "2598px, 3.08 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "#features section.section.g2 \"Everything Xpense does, on one i\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#privacy section.section.ground-surface \"Your expenses stay with you Xpen\"",
+    "msg": "framed, 66px of #faq section.section \"Xpense details and questions Dev\" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#privacy section.section.ground-surface \"Your expenses stay with you Xpen\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#faq section.section \"Xpense details and questions Dev\"",
+    "msg": "framed, 259px of the footer shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#faq section.section \"Xpense details and questions Dev\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "overlap-text",
+    "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap:nth-of-type(3) > h3 \"The mark’s amber gap is what you kept\"",
+    "msg": "lies over the text \"The mark’s top bar is last month\" (div.film-cap.on > h3) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "no-visual",
+    "where": "section#privacy \"Your expenses stay with you\"",
+    "msg": "pictures, effects and mocks cover 22% of this section; a feature section needs a visual (about 25% or more)",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#story \"The mark’s top bar is last month\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "cta",
+    "where": "section#features \"Everything Xpense does, on one iPhone\"",
+    "msg": "a section over 1.5 screens long with no link or button in it",
+    "fix": "add the action: a button in the hero, one on every priced item, one in the closing section",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-headings",
+    "where": "div.fx-grid > article.fx:nth-of-type(2) > div:nth-of-type(2) > h3 \"Shows where the month went\"",
+    "msg": "the card title \"Shows where the month went\" names no product, part, place or section (4 card titles like it) (and 3 more like it: \"Keeps each category on b\", \"Splits costs and settles\", \"Adds from widgets and Si\")",
+    "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tilt",
+    "where": "article.fx:nth-of-type(2) > div.fx__ui > div.pc.pc-donut > svg",
+    "msg": "rotated -90.0°",
+    "fix": "set it straight",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-contrast",
+    "where": "div.hero-text.grid > div.ly-collage.span-6 > div.ly-collage__set:nth-of-type(1) > div.ly-piece.pc-toast \"£3.40 logged to Food.\"",
+    "msg": "2 lines of text in drawn mocks read under 4.5:1 (2 colour pairs), the worst \"£3.40 logged to Food.\" in #070b09 on #161d1a at 1.15:1",
+    "fix": "lift the mocks' muted text (labels, meta, initials) to 4.5:1 on their own panel, or set it larger",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "header.dock.ready > div.dock__bar > a.btn.btn--primary \"Download Xpense\"",
+    "msg": "\"Download Xpense\" goes to #get, in the footer",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Download Xpense\"",
+    "msg": "\"Download Xpense\" goes to #get, in the footer",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.wrap > div.closing__cta.close--word > div.section-head--split > a.btn.btn--primary \"Download Xpense\"",
+    "msg": "\"Download Xpense\" goes to #get, the block it already sits in",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.wrap.grid > div.span-5.stack-4 > p:nth-of-type(2) > a.link \"Read the privacy policy\"",
+    "msg": "\"Read the privacy policy\" goes to privacy.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.span-7.start-6 > div.faq__item:nth-of-type(4) > p > a.link \"contact support\"",
+    "msg": "\"contact support\" goes to support.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "links",
+    "where": "div.span-2.footer__col:nth-of-type(3) > ul > li:nth-of-type(3) > a \"Terms of use\"",
+    "msg": "\"Terms of use\" goes to terms.html, which does not exist here",
+    "fix": "point every link at a real section, page or file",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "header.dock.ready > div.dock__bar > a.dock__logo \"Xpense\"",
+    "msg": "\"Xpense\" opens a section headed \"Expense tracker for iPhone\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav#dock-links > a:nth-of-type(1) \"Overview\"",
+    "msg": "\"Overview\" opens a section headed \"Quick Add logs an expense in one tap\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav#dock-links > a:nth-of-type(3) \"Features\"",
+    "msg": "\"Features\" opens a section headed \"Everything Xpense does, on one iPhone\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-labels",
+    "where": "nav#dock-links > a:nth-of-type(4) \"Privacy\"",
+    "msg": "\"Privacy\" opens a section headed \"Your expenses stay with you\"",
+    "fix": "name each nav link after the heading of the section it opens",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "ul.xp-recent > li:nth-of-type(2) > span > b \"Train to work\"",
+    "msg": "2 lines of div.ph:nth-of-type(1) fade out under its edge (\"Train to work\", \"£8.20\"): drawn at a fraction of #f4f6f3 on #161d1a, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-length",
+    "where": "section#faq \"Xpense details and questions\"",
+    "msg": "2 sections over 90 words a screen outside the UI mocks (\"Xpense details and quest\" 140, \"Your expenses stay with \" 98); 71 words a screen across the page (571 words in 8 screens): a tech page says it in about 80 or fewer",
+    "fix": "cut every section to its heading, one line and the product UI: the UI says the rest; no second paragraph, no list of feature sentences",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "action-repeat",
+    "where": "header.dock.ready > div.dock__bar > a.btn.btn--primary:nth-of-type(3) \"download xpense\"",
+    "msg": "\"download xpense\" shows 2 times on the first screen at 1440px (nav, hero): the nav's button and the hero's; nothing else on the screen may repeat it",
+    "fix": "show the action once a screen besides the nav's button: the hero's, the close's or the phone bar's, never all at once",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#features / section#privacy",
+    "msg": "522px of air between the content of these two sections: 128-480px (64-600px WARN) (SR-3)",
+    "fix": "keep 128-480px of air between the content of neighbouring sections (112-420px on a phone): the sections' padding (--padt, --padb)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#features \"Everything Xpense does, on one iPhoneBui\"",
+    "msg": "screen group 2 of this two-screen section fills 33.8% of a screen: 40% or more (25% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "container-edges",
+    "where": "section#story > div.wrap.film-pin > div.film-progress",
+    "msg": "a box over half the container wide runs 160-1280px, not on the container's lines at 80-1360px (it is in a scroll scene: told as a WARN) (SR-6)",
+    "fix": "run the picture or box from the container's left line to its right line, or put it in a row or a split",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "split-pair",
+    "where": "section#story > div.wrap.film-pin > div.film-inner.grid \"Last monthThe mark’s top bar is last mon\"",
+    "msg": "the two columns of the split start 28px apart at the top: a split's columns are top-aligned, 8px either way (it is in a scroll scene: told as a WARN) (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "overlap-text",
+    "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap:nth-of-type(3) > p:nth-of-type(2) \"Spend less than last month and Xpense sa\"",
+    "msg": "lies over the text \"Every expense in it is there to search, \" (div.film-cap.on > p:nth-of-type(2)) (inside a held section or scroll scene, whose motion --quick does not check)",
+    "fix": "move the box off the text (or the text off the box)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "tap-size",
+    "where": "header.dock.ready > div.dock__bar > a.dock__logo \"Xpense\"",
+    "msg": "a 118x30px tap target: under the 44px a phone needs",
+    "fix": "make every link and control outside running text 44px tall on a phone: display: inline-flex; align-items: center; min-height: 44px (a footer list then needs no gap), a 44px small button, or a transparent ::before laid past the box",
+    "widths": [
+     390,
+     320
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#faq / footer#get",
+    "msg": "163px between these sections, +33% against the median 123px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#features / section#privacy",
+    "msg": "uneven space at the edge of a band: 48px outside its edge, 93px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "section#privacy / section#faq",
+    "msg": "uneven space at the edge of a band: 93px outside its edge, 48px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "fade-cut",
+    "where": "div.ph__body > ul.xp-recent > li:nth-of-type(2) > em \"£8.20\"",
+    "msg": "a line of div.ph:nth-of-type(1) fades out under its edge (\"£8.20\"): drawn at a fraction of #f4f6f3 on #161d1a, half-erased",
+    "fix": "fit the mock's rows inside its panel (fewer rows, a taller panel), or end the fade below the last whole row: no row half-erased",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 108,
+   "layout": 3
+  }
+ },
+ "open": [
+  {
+   "check": "button-styles",
+   "where": "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Download Xpense\"",
+   "msg": "one button style (pill, fill #0a8466) in 2 heights: 52, 64px (\"Download Xpense\" 64px, \"Download Xpense\" 52px)",
+   "fix": "one primary and one secondary button: one shape, one height per size, one label size",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "button-styles"
+   ],
+   "wheres": [
+    "div.wrap > div.hero-text.grid > div.span-3.start-10 > a.btn.btn--primary \"Download Xpense\""
+   ]
+  },
+  {
+   "check": "copy-headings",
+   "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\"",
+   "msg": "\"The mark’s top bar is last month\" names no product, part, place or section (5 headings like it; at most one brand line per page) (and 4 more like it: \"Deleting your account\", \"Sync between devices\", \"Hide My Email and our re\", \"Reporting a shared group\")",
+   "fix": "name the thing in every heading: the product, a part, the place or a section noun",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "copy-headings"
+   ],
+   "wheres": [
+    "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\"",
+   "msg": "an h3 at 42px, as large as the smallest h2 (42px) or larger",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "div.film-inner.grid > div.film-caps.span-7 > div.film-cap.on > h3 \"The mark’s top bar is last month\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "main#top > section.hero.hero--triptych / section#app",
+   "msg": "407px between these sections, +122% against the median 183px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "main#top > section.hero.hero--triptych / section#app"
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#features / section#privacy",
+   "msg": "495px between these sections, +111% against the median 235px of gaps at a change of ground",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#features / section#privacy"
+   ]
+  },
+  {
+   "check": "row-lines",
+   "where": "section#app > div.wrap.grid > div.span-7.start-6 \"9:41 OverviewGood evening Spent in Octob\"",
+   "msg": "a row of 2 items: its first item starts at 728px, the container's left line at 80px (2px either way) (SR-7)",
+   "fix": "start the row's first item on the container's left line and end its last on the right line, every item one height",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "row-lines"
+   ],
+   "wheres": [
+    "section#app > div.wrap.grid > div.span-7.start-6 \"9:41 OverviewGood evening Spent in Octob\""
+   ]
+  },
+  {
+   "check": "nav-covers",
+   "where": "header.dock.ready \"Skip to content Xpense\"",
+   "msg": "sits on top of the text \"Groups for flats and trips. Xpense track\" while the page scrolls: part of the line shows beside it",
+   "fix": "make the fixed nav one opaque band across the whole screen, or let it scroll away with the page",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav-covers"
+   ],
+   "wheres": [
+    "header.dock.ready \"Skip to content Xpense\""
+   ]
+  },
+  {
+   "check": "off-grid",
+   "where": "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\"",
+   "msg": "left edge at 208px, 7px off a common edge of its section at 201px (4 elements, like a)",
+   "fix": "move it onto the page margin, or the column edge its section uses",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "off-grid"
+   ],
+   "wheres": [
+    "div.closing__links > div.footer__legal > span > a:nth-of-type(2) \"Terms\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "section#app / section#story",
+   "msg": "48px between these sections, -61% against the median 123px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "section#app / section#story"
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "#story section.film.live \"Last monthThe mark’s top bar is \"",
+   "msg": "its content fills 19% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "#story section.film.live \"Last monthThe mark’s top bar is \""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "#features section.section.g2 \"Everything Xpense does, on one i\"",
+   "msg": "2598px, 3.08 screens; a section is exactly one or two (--h), or on a phone at least one that its content fills",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "#features section.section.g2 \"Everything Xpense does, on one i\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#privacy section.section.ground-surface \"Your expenses stay with you Xpen\"",
+   "msg": "framed, 66px of #faq section.section \"Xpense details and questions Dev\" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#privacy section.section.ground-surface \"Your expenses stay with you Xpen\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#faq section.section \"Xpense details and questions Dev\"",
+   "msg": "framed, 259px of the footer shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#faq section.section \"Xpense details and questions Dev\""
+   ]
+  }
+ ],
+ "waived": [
+  {
+   "check": "nav",
+   "where": "header.dock.ready > div.dock__bar",
+   "msg": "the nav bar spans 130-1310px but the content spans 80-1360px",
+   "fix": "make the nav one bar from the content's left edge to its right edge, with every link and action inside it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "nav"
+   ],
+   "wheres": [
+    "header.dock.ready > div.dock__bar"
+   ],
+   "reason": "the owner asked for the dotXline glass dock across the family of sites: a floating pill narrower than the content, folding into the app icon on scroll"
+  },
+  {
+   "check": "empty-area",
+   "where": "section#story \"The mark’s top bar is last month\"",
+   "msg": "82% of the section is empty: 1424px under its last (svg.span-5), 4% beside content that covers under half the container, in its 1800px of rows (WARN over 35%, FAIL over 50%)",
+   "fix": "fill the section: a picture or a second column beside the words, or more of its own content; the section stays one or two screens tall (T-height)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "empty-area"
+   ],
+   "wheres": [
+    "section#story \"The mark’s top bar is last month\""
+   ],
+   "reason": "the logo film pins with position sticky inside its own two-screen box; the space under it is the scroll runway the owner's mark animation draws over, never seen empty"
+  },
+  {
+   "check": "container-edges",
+   "where": "header.dock.ready \"Skip to content Xpense OverviewThe markF\"",
+   "msg": "the nav's content runs 148px from the left and 138px from the right (read from its outermost blocks: no .wrap): the page's container starts at 80px; 148 and 138px are not one margin; the margin is 64-120px at 1440px (one container, equal margins, 2px either way) (SR-6)",
+   "fix": "use one container on every section and the nav (.wrap): one margin left and right, 64-120px on a desktop, 16-24px on a phone",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "header.dock.ready \"Skip to content Xpense OverviewThe markF\""
+   ],
+   "reason": "the glass dock is a centred floating pill by the owner's request (same as freshbit.dotxline.com and dotxline.com), not a full-width bar on the container lines"
+  },
+  {
+   "check": "hero-lines",
+   "where": "section.hero h1",
+   "msg": "the check fills the h1 to 34 characters (this hero's maxChars in heroes.json), not the page's own: it takes 4 lines at 1440, 3 at most",
+   "fix": "the check fills the h1 to this hero's maxChars, not your own: take the next type pairing the deal printed (start.mjs); when the h1 is final and fits, waive it (target: section.hero h1)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-lines"
+   ],
+   "wheres": [
+    "section.hero h1"
+   ],
+   "reason": "the h1 is final (Expense tracker for iPhone, 26 characters) and sets in two lines at 1440; the 34-character fill is the hero's ceiling, not this copy"
+  }
+ ],
+ "warnCount": 30,
+ "at": "2026-11-13T09:47:11.424Z",
+ "openTold": true
+}

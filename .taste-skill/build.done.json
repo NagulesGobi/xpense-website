@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "software",
+ "category": "expense tracker app for iPhone",
+ "primary": "Download Xpense",
+ "rounds": 3,
+ "start": "2026-11-13T09:20:16.918Z",
+ "by": "gate.mjs --start"
+}
