@@ -19,7 +19,7 @@ def dock(cur):
     <nav class="dock__links" id="dock-links" aria-label="Main">{links}</nav>
     <button class="icon-btn theme-btn" type="button" aria-label="Switch light and dark"><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg></button>
     <button class="icon-btn dock__menu" type="button" aria-expanded="false" aria-controls="dock-links" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h16M4 16h16"/></svg></button>
-    <a class="btn btn--primary" href="#get" data-appstore>{APPLE}<span class="lbl-long">Download&nbsp;</span>Xpense</a>
+    <a class="btn btn--primary" href="https://apps.apple.com/app/id6829723496" data-appstore rel="noopener">{APPLE}<span class="lbl-long">Download&nbsp;</span>Xpense</a>
   </div>
 </header>'''
 
